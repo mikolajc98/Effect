@@ -25,7 +25,7 @@ namespace EffectAdvanced.Examples
         private static Effect<decimal> Divide(decimal a, decimal b)
         {
             if (b == 0)
-                return Effect<decimal>.Failure("Cant divide by 0.",b);
+                return Effect<decimal>.Failure("Cant divide by 0.");
 
             return Effect<decimal>.Successful(a/b);
         }

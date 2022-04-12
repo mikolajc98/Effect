@@ -51,7 +51,7 @@ namespace EffectCore
         }
         public Effect<T> ToEffect<T>(T content)
         {
-            return Fail ? Effect<T>.Failure(Message, content) : Effect<T>.Successful(Message, content);
+            return Fail ? Effect<T>.Failure(Message) : Effect<T>.Successful(Message, content);
         }        
 
         public override bool Equals(object obj)

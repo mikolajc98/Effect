@@ -26,7 +26,7 @@ namespace EffectTests
         [TestMethod]
         public void MergeFailureTest()
         {
-            Effect expected = Effect.Failure("Error 1.\r\nError 2.\r\nError 3.");
+            Effect expected = Effect.Failure($"Error 1.{Effect._defaultMergeSeparator}Error 2.{Effect._defaultMergeSeparator}Error 3.");
 
             IEnumerable<Effect> effects = new List<Effect>()
             {

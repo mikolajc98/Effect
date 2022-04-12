@@ -26,13 +26,9 @@
         {
             return new Effect<T>(false, _successfulDefaultMessage, content);
         }
-        public static Effect<T> Failure(string message, T content)
+        public static Effect<T> Failure(string message)
         {
-            return new Effect<T>(true, message, content);
-        }
-        public static Effect<T> Failure(T content)
-        {
-            return new Effect<T>(true,_failureDefaultMessage, content);
+            return new Effect<T>(true, message, default(T));
         }
 
         public static bool operator ==(Effect<T> left, Effect<T> right)
